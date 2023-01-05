@@ -1,0 +1,158 @@
+* {
+    font-family: 'Tinos', serif !important;
+}
+
+body {
+    background-color: #E5E5E5;
+    overflow: hidden;
+}
+
+main, footer div{
+    max-width: 1024px;
+    margin: 2em auto;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    gap:5%;
+}
+
+#icono {
+    margin-left: 1.5em;
+}
+
+#area-ingreso-texto {
+    width: 60%;
+}
+
+button {
+    margin-top: 1em;
+    padding: 1em;
+    border: 1px solid #1d1d1d;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s background-color;
+}
+
+button:hover {
+    background-color: #d6d6d6;
+}
+
+button:active {
+    transform: scale(1.01);
+}
+
+#area-ingreso-texto button {
+    margin-right: 1em;
+    width: 50%;
+}
+
+#area-ingreso-texto textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+}
+
+#area-ingreso-texto textarea::placeholder,
+textarea {
+    font-size: 2rem;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+#area-ingreso-texto textarea + p {
+    margin-top: 1.8em;
+    font-size: 0.85em;
+    color: red;
+}
+
+#area-ingreso-texto div {
+    display: flex;
+}
+
+#resultado {
+    background-color: white;
+    color: #1d1d1d;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 2em;
+    border-radius: 20px;
+    height: 30em;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+}
+
+#encontrado button {
+    width: 100%;
+}
+
+#no-encontrado h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
+#no-encontrado img{
+    width: 100%;
+}
+
+footer {
+    background-color: #0A3871;
+    color: white;
+    padding: 0.5em 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mis-redes img {
+    margin-left: 0.5em;
+    width: 2em;
+    filter: invert(1);
+}
+
+.oculto {
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        overflow: auto;
+    }
+    
+    main{
+    display: block;
+    padding: 0 2em;
+    }
+
+    #area-ingreso-texto, #resultado{
+        width: 100%;
+        margin: 3em auto;
+    }
+
+    #no-encontrado img{
+        display: none;
+    }
+
+    footer{
+        padding: 2em;
+        display: block;
+    }
+
+    #mis-redes{
+        margin-top: 1em;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+    #area-ingreso-texto div{
+    display: block;
+    }
+    #area-ingreso-texto button {
+        width: 100%;
+    }
+}
