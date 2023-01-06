@@ -6,41 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador - FGM</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Tinos:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <h1><img src="https://drive.google.com/uc?id=1MHMgOiQO005o1EVOoDPWX-EnydfmSdMu" alt="Logo" class="icon"></h1>
+    </header>
     <main>
-        <h1><img src="./imagenes/Vector.png" alt="" id="icono"></h1>
-        <section id="area-ingreso-texto">
-            <textarea name="" id="textarea-ingreso" cols="30" rows="8" placeholder="Ingrese el texto aquí"></textarea>
+        <section class="caja-texto">
+            <textarea name="" id="caja-texto" cols="30" rows="8" placeholder="Ingrese el texto aquí"></textarea>
             <p id="error" class="oculto"> Solo letras minúsculas y sin acentos.</p>
             <div>
                 <button id="boton-encriptar">Encriptar</button>
                 <button id="boton-desencriptar">Desencriptar</button>
             </div>
         </section>
-        <section id="resultado">
-            <div id="no-encontrado">
-                <img src="./imagenes/Muñeco.jpg" alt="Muñeco con una lupa.">
+        <section class="resultado">
+            <div class="no-encontrado" id="no-encontrado">
+                <img src="https://drive.google.com/uc?id=1MKfUBb1G_WhADDOJ8rqPqnYSdblRNL0Q" alt="Inspector con lupa">
                 <h2>Ningun elemento fue encontrado</h2>
                 <p>Ingresa el texto que quieras encriptar o desencriptar.</p>
             </div>
-            <div id="encontrado" class="oculto" >
-                <p id="texto-final"></p>
+            <div class="oculto encontrado" id="encontrado">
+                <p id="texto-encriptado"></p>
                 <button id="boton-copiar">Copiar</button>
             </div>
         </section>
     </main>
     <footer>
         <div>
-            <p>Proyecto realizado en 2022.</p>
-            <p>¡Gracias a Alura + Oracle por la oportunidad!</p>
+            <p>&copy Realizado por Gomez D. Jasson para Alura y Oracle - 2023</p>
         </div>
-        <div id="mis-redes">
-            <a class="icono" href="https://github.com/Iara-Pou"><img src="./imagenes/github.png" alt="logo github"></a>
-            <a class="icono" href="https://www.linkedin.com/in/iara-pou-716352205/"><img src="./imagenes/linkedin.png" alt="logo linkedin"></a>
-            <a class="icono" href="https://www.instagram.com/iaraapou/"><img src="./imagenes/instagram.png" alt="logo instagram"></a>
+        <div class="redes">
+            <a href="https://github.com/gomezdjasson" target="_blank"class="redes-icons"> 
+                <i class='bx bxl-github' style='color:#00117e'></i> </a>            
         </div>
     </footer>
     <script src="script.js" type="text/javascript"></script>

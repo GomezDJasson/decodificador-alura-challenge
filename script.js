@@ -1,10 +1,10 @@
 function copiarTexto() {
-    let texto = document.querySelector('#texto-final').textContent;
+    let texto = document.querySelector('#texto-encriptado').textContent;
     navigator.clipboard.writeText(texto);
 }
 
 function manejar(tarea) {
-    const textoIngresado = document.querySelector("#textarea-ingreso").value;
+    const textoIngresado = document.querySelector("#caja-texto").value;
     const esExito = verificar(textoIngresado) === "";
 
     if (esExito) {
@@ -24,7 +24,7 @@ function esconderErrores() {
 }
 
 function reiniciarTextarea() {
-    const textoIngresado = document.querySelector("#textarea-ingreso");
+    const textoIngresado = document.querySelector("#caja-texto");
     textoIngresado.value = "";
     textoIngresado.focus();
 }
@@ -92,7 +92,7 @@ function verificar(textoIngresado) {
     if (textoIngresado.trim() === "") {
         return "El texto debe contener un carácter o más.";
     } else if (! /^[a-z1-9¿?¡!.,\nñ ]*$/.test(textoIngresado)) {
-        return "Puedes ingresar letras en minúsculas y sin acentos, espacios, saltos de líneas, números y carácteres especiales ('¿', '?', '¡', '!', '.', ',').";
+        return "Ingresar solo letras en minúsculas y sin acentos, espacios, saltos de líneas, números y carácteres especiales ('¿', '?', '¡', '!', '.', ',').";
     } else {
         return "";
     }
@@ -117,7 +117,7 @@ function esconderMensajeDefault() {
 }
 
 function mostrarResultado(resultado) {
-    const textoResultado = document.querySelector("#texto-final");
+    const textoResultado = document.querySelector("#texto-encriptado");
     textoResultado.textContent = resultado;
     //mostrar contenedor
     document.querySelector("#encontrado").classList.remove("oculto");
@@ -127,7 +127,7 @@ const $botonEncriptar = document.querySelector("#boton-encriptar");
 const $botonDesencriptar = document.querySelector("#boton-desencriptar");
 const $botonCopiar = document.querySelector("#boton-copiar");
 const VOCAL_A_CODIGO = {
-    "a": "ai",
+   "a": "ai",
     "e": "enter",
     "i": "imes",
     "o": "ober",
@@ -137,3 +137,4 @@ const VOCAL_A_CODIGO = {
 $botonEncriptar.onclick = () => {manejar(encriptarTexto)};
 $botonDesencriptar.onclick = () => {manejar(desencriptarTexto)};
 $botonCopiar.onclick = copiarTexto;
+
